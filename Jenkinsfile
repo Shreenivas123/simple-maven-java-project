@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/Shreenivas123/weekdays-10am.git'
+                git branch: 'main', url: 'https://github.com/Shreenivas123/simple-maven-java-project.git'
             }
         }
         stage('build') {
