@@ -5,16 +5,18 @@
 }
 
 :root {
-    --primary-color: #667eea;
+    --primary-color: #0831ea;
     --secondary-color: #764ba2;
-    --text-color: #333;
-    --light-bg: #f7f7f7;
+    --text-color: #ffffff;
+    --light-bg: #041847;
+    --dark-bg: #0f1829;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    background: var(--dark-bg);
 }
 
 .container {
@@ -25,11 +27,12 @@ body {
 
 /* Navbar */
 .navbar {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--dark-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .navbar .container {
@@ -192,12 +195,13 @@ body {
 }
 
 .feature-card {
-    background: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s;
+    border: 2px solid var(--primary-color);
 }
 
 .feature-card:hover {
