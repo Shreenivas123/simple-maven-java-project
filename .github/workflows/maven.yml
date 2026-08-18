@@ -1,8 +1,7 @@
 name: Java CI with Maven deploy to ec2 Tomcat
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   maven-build-and-deploy:
