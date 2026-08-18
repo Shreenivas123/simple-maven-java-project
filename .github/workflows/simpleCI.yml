@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  build:
+  Project build check CI:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,3 +24,18 @@ jobs:
         mvn clean package
         ls -al
         ls -al target
+
+  shell-commands:
+    needs: "Project build check CI"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run shell commands
+      run: |
+        echo "CI Job completed successfully!"
+        echo "Running some shell commands..."
+        pwd
+        whoami
+        date
