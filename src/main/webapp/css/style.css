@@ -228,15 +228,16 @@ body {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
-    color: #666;
+    color: #e0e0e0;
 }
 
 /* Footer */
 .footer {
-    background: var(--text-color);
-    color: white;
+    background: var(--dark-bg);
+    color: var(--text-color);
     text-align: center;
     padding: 2rem;
+    border-top: 2px solid var(--primary-color);
 }
 
 /* Animations */
@@ -266,7 +267,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 20px;
-    background: white;
+    background: var(--dark-bg);
 }
 
 .contact h2 {
@@ -292,10 +293,12 @@ body {
 
 .input-field {
     padding: 12px;
-    border: 2px solid #ddd;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     font-size: 1rem;
     font-family: inherit;
+    background: var(--light-bg);
+    color: white;
     transition: border-color 0.3s;
 }
 
@@ -342,7 +345,7 @@ body {
 }
 
 .info-item p {
-    color: #666;
+    color: #e0e0e0;
 }
 
 @media (max-width: 768px) {
