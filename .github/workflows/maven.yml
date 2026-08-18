@@ -29,7 +29,7 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         source: "target/*.war"
-        target: "/home/ec2-user/apache-tomcat-9.0.120/webapps"
+        target: "/home/ubuntu/apache-tomcat-10.1.57/webapps"
         strip_components: 1
 
     - name: Restart Tomcat Server
@@ -40,10 +40,10 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           # Stop Tomcat
-          sh /home/ec2-user/apache-tomcat-9.0.120/bin/shutdown.sh || true
+          sh /home/ubuntu/apache-tomcat-10.1.57/bin/shutdown.sh || true
           
           # Optional: Clear old extracted folder to prevent caching conflicts
-          # rm -rf /home/ec2-user/apache-tomcat-9.0.120/webapps/YOUR_APP_NAME
+          # rm -rf /home/ubuntu/apache-tomcat-10.1.57/webapps/YOUR_APP_NAME
           
           # Start Tomcat
-          sh /home/ec2-user/apache-tomcat-9.0.120/bin/startup.sh
+          sh /home/ubuntu/apache-tomcat-10.1.57/bin/startup.sh
